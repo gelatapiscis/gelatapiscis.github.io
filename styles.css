@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'SatisfyRegular';
+    src: url('fonts/Satisfy-Regular.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'RobotoCondensedBold';
+    src: url('fonts/RobotoCondensed-Bold.ttf') format('truetype');
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    animation: cambioColor 10s infinite;
+}
+.main-wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("images/web.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    width: 100%;
+  }
+.signature{
+    color: #333;
+    font-family: 'SatisfyRegular', sans-serif;
+    font-size: 40px;
+    margin: 10px 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info{
+    font-family: 'RobotoCondensedBold', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+}
+
+.spotify{
+    margin: 75px 25px 0 25px;
+}
+
+.background, .spotify {
+    flex: 1;
+  }
+
+ @media (max-width: 600px) {
+    .main-wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .background {
+        display: none;
+    }
+    body{
+        background-image: url("images/web.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 100%;
+    
+    }
+    .spotify{
+        margin-top: 500px;
+    }
+    
+    .info{
+        background-color: white;
+        border-radius: 20px;
+        padding: 15px;
+    }
+}
+
+  @keyframes cambioColor {
+    0% { background-color: #e6aa05; }
+    25% { background-color: #a57a03; }
+    50% { background-color: #e6aa05; }
+    75% { background-color: #a57a03; }
+    100% { background-color: #e6aa05; }
+  }
+  
